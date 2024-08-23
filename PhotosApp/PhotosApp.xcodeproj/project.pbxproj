@@ -17,8 +17,6 @@
 		420873FB2C77ADFE00CC208D /* PhotosListViewController+TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420873FA2C77ADFE00CC208D /* PhotosListViewController+TableViewExtension.swift */; };
 		4208740B2C77B0F500CC208D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4208740A2C77B0F500CC208D /* UIView+Extension.swift */; };
 		4208740E2C77B3B200CC208D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4208740D2C77B3B200CC208D /* UIImageView+Extension.swift */; };
-		420874112C77B55B00CC208D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 420874102C77B55B00CC208D /* Alamofire */; };
-		420874132C77B55B00CC208D /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 420874122C77B55B00CC208D /* AlamofireDynamic */; };
 		420874152C77B58F00CC208D /* RemoteApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420874142C77B58F00CC208D /* RemoteApi.swift */; };
 		420874172C77B5D800CC208D /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420874162C77B5D800CC208D /* ErrorMessage.swift */; };
 		4208741A2C77B60D00CC208D /* PhotosListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420874182C77B60D00CC208D /* PhotosListTableViewCell.swift */; };
@@ -30,11 +28,24 @@
 		420874252C77B95900CC208D /* PhotosListRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420874242C77B95900CC208D /* PhotosListRepositoryImplementation.swift */; };
 		420874272C77B9C900CC208D /* PhotosListAPIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420874262C77B9C900CC208D /* PhotosListAPIRepository.swift */; };
 		4208742A2C77BB2300CC208D /* PhotosListAPIRepoistoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420874292C77BB2300CC208D /* PhotosListAPIRepoistoryImplementation.swift */; };
+		4299BA972C78F29B005BC42B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4299BA962C78F29B005BC42B /* Alamofire */; };
 		42BDA8042C78E1BF0038D7DA /* DisplayPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BDA8032C78E1BF0038D7DA /* DisplayPhotoViewController.swift */; };
 		42BDA8062C78E1D00038D7DA /* DisplayPhoto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42BDA8052C78E1D00038D7DA /* DisplayPhoto.storyboard */; };
-		42BDA8082C78E5A70038D7DA /* DisplayPhoto+ScollDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BDA8072C78E5A70038D7DA /* DisplayPhoto+ScollDelegate.swift */; };
 		42BDA80A2C78E7B80038D7DA /* PhotoDisplayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BDA8092C78E7B80038D7DA /* PhotoDisplayViewModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4299BA942C78F248005BC42B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		420873D52C77ABCF00CC208D /* PhotosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,7 +73,6 @@
 		420874292C77BB2300CC208D /* PhotosListAPIRepoistoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListAPIRepoistoryImplementation.swift; sourceTree = "<group>"; };
 		42BDA8032C78E1BF0038D7DA /* DisplayPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPhotoViewController.swift; sourceTree = "<group>"; };
 		42BDA8052C78E1D00038D7DA /* DisplayPhoto.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DisplayPhoto.storyboard; sourceTree = "<group>"; };
-		42BDA8072C78E5A70038D7DA /* DisplayPhoto+ScollDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisplayPhoto+ScollDelegate.swift"; sourceTree = "<group>"; };
 		42BDA8092C78E7B80038D7DA /* PhotoDisplayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDisplayViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,8 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				420874112C77B55B00CC208D /* Alamofire in Frameworks */,
-				420874132C77B55B00CC208D /* AlamofireDynamic in Frameworks */,
+				4299BA972C78F29B005BC42B /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +356,6 @@
 			isa = PBXGroup;
 			children = (
 				42BDA8032C78E1BF0038D7DA /* DisplayPhotoViewController.swift */,
-				42BDA8072C78E5A70038D7DA /* DisplayPhoto+ScollDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -370,6 +378,7 @@
 				420873D12C77ABCF00CC208D /* Sources */,
 				420873D22C77ABCF00CC208D /* Frameworks */,
 				420873D32C77ABCF00CC208D /* Resources */,
+				4299BA942C78F248005BC42B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -377,8 +386,7 @@
 			);
 			name = PhotosApp;
 			packageProductDependencies = (
-				420874102C77B55B00CC208D /* Alamofire */,
-				420874122C77B55B00CC208D /* AlamofireDynamic */,
+				4299BA962C78F29B005BC42B /* Alamofire */,
 			);
 			productName = PhotosApp;
 			productReference = 420873D52C77ABCF00CC208D /* PhotosApp.app */;
@@ -409,7 +417,7 @@
 			);
 			mainGroup = 420873CC2C77ABCF00CC208D;
 			packageReferences = (
-				4208740F2C77B55B00CC208D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				4299BA952C78F29B005BC42B /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 420873D62C77ABCF00CC208D /* Products */;
 			projectDirPath = "";
@@ -447,7 +455,6 @@
 				4208740B2C77B0F500CC208D /* UIView+Extension.swift in Sources */,
 				420873D92C77ABCF00CC208D /* AppDelegate.swift in Sources */,
 				4208740E2C77B3B200CC208D /* UIImageView+Extension.swift in Sources */,
-				42BDA8082C78E5A70038D7DA /* DisplayPhoto+ScollDelegate.swift in Sources */,
 				4208741D2C77B6CF00CC208D /* Photos.swift in Sources */,
 				420874212C77B80200CC208D /* Publisher+AsFuture.swift in Sources */,
 				420874252C77B95900CC208D /* PhotosListRepositoryImplementation.swift in Sources */,
@@ -611,7 +618,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8BVT59WJV8;
+				DEVELOPMENT_TEAM = 25D2639H39;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotosApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -625,7 +632,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = emcan.PickrrApp;
+				PRODUCT_BUNDLE_IDENTIFIER = ADVA.PhotosApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -694,26 +701,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4208740F2C77B55B00CC208D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		4299BA952C78F29B005BC42B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.9.1;
+				minimumVersion = 5.7.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		420874102C77B55B00CC208D /* Alamofire */ = {
+		4299BA962C78F29B005BC42B /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4208740F2C77B55B00CC208D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 4299BA952C78F29B005BC42B /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		420874122C77B55B00CC208D /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4208740F2C77B55B00CC208D /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
