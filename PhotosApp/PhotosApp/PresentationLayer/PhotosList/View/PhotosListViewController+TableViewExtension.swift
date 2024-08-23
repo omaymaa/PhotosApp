@@ -22,6 +22,21 @@ extension PhotosListViewController : UITableViewDelegate , UITableViewDataSource
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           let photoData = viewModel.photosData[indexPath.row]
+           
+        let storyboard = UIStoryboard(name: "DisplayPhoto", bundle: nil)
+           if let displayPhotoVC = storyboard.instantiateViewController(withIdentifier: "DisplayPhotoViewController") as? DisplayPhotoViewController {
+               
+               let displayPhotoVM = DisplayPhotoViewModel(photoURL: photoData.thumbnailURL, title: photoData.title)
+               displayPhotoVC.viewModel = displayPhotoVM
+               
+               // Present the DisplayPhotoViewController
+               displayPhotoVC.modalPresentationStyle = .fullScreen
+               present(displayPhotoVC, animated: true, completion: nil)
+           }
+       }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
             let offsetY = scrollView.contentOffset.y
             let contentHeight = scrollView.contentSize.height

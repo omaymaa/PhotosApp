@@ -30,6 +30,10 @@
 		420874252C77B95900CC208D /* PhotosListRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420874242C77B95900CC208D /* PhotosListRepositoryImplementation.swift */; };
 		420874272C77B9C900CC208D /* PhotosListAPIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420874262C77B9C900CC208D /* PhotosListAPIRepository.swift */; };
 		4208742A2C77BB2300CC208D /* PhotosListAPIRepoistoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420874292C77BB2300CC208D /* PhotosListAPIRepoistoryImplementation.swift */; };
+		42BDA8042C78E1BF0038D7DA /* DisplayPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BDA8032C78E1BF0038D7DA /* DisplayPhotoViewController.swift */; };
+		42BDA8062C78E1D00038D7DA /* DisplayPhoto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42BDA8052C78E1D00038D7DA /* DisplayPhoto.storyboard */; };
+		42BDA8082C78E5A70038D7DA /* DisplayPhoto+ScollDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BDA8072C78E5A70038D7DA /* DisplayPhoto+ScollDelegate.swift */; };
+		42BDA80A2C78E7B80038D7DA /* PhotoDisplayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BDA8092C78E7B80038D7DA /* PhotoDisplayViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,10 @@
 		420874242C77B95900CC208D /* PhotosListRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListRepositoryImplementation.swift; sourceTree = "<group>"; };
 		420874262C77B9C900CC208D /* PhotosListAPIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListAPIRepository.swift; sourceTree = "<group>"; };
 		420874292C77BB2300CC208D /* PhotosListAPIRepoistoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListAPIRepoistoryImplementation.swift; sourceTree = "<group>"; };
+		42BDA8032C78E1BF0038D7DA /* DisplayPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPhotoViewController.swift; sourceTree = "<group>"; };
+		42BDA8052C78E1D00038D7DA /* DisplayPhoto.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DisplayPhoto.storyboard; sourceTree = "<group>"; };
+		42BDA8072C78E5A70038D7DA /* DisplayPhoto+ScollDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisplayPhoto+ScollDelegate.swift"; sourceTree = "<group>"; };
+		42BDA8092C78E7B80038D7DA /* PhotoDisplayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDisplayViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,7 @@
 		420873ED2C77ACDC00CC208D /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				42BDA7FF2C78E17B0038D7DA /* DisplayPhoto */,
 				420873F32C77AD7800CC208D /* PhotosList */,
 			);
 			path = PresentationLayer;
@@ -316,6 +325,41 @@
 			path = PhotosList;
 			sourceTree = "<group>";
 		};
+		42BDA7FF2C78E17B0038D7DA /* DisplayPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				42BDA8022C78E1A30038D7DA /* ViewModel */,
+				42BDA8012C78E19E0038D7DA /* View */,
+				42BDA8002C78E18C0038D7DA /* DisplayPhotoStoryBoard */,
+			);
+			path = DisplayPhoto;
+			sourceTree = "<group>";
+		};
+		42BDA8002C78E18C0038D7DA /* DisplayPhotoStoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				42BDA8052C78E1D00038D7DA /* DisplayPhoto.storyboard */,
+			);
+			path = DisplayPhotoStoryBoard;
+			sourceTree = "<group>";
+		};
+		42BDA8012C78E19E0038D7DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				42BDA8032C78E1BF0038D7DA /* DisplayPhotoViewController.swift */,
+				42BDA8072C78E5A70038D7DA /* DisplayPhoto+ScollDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		42BDA8022C78E1A30038D7DA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				42BDA8092C78E7B80038D7DA /* PhotoDisplayViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -384,6 +428,7 @@
 				4208741B2C77B60D00CC208D /* PhotosListTableViewCell.xib in Resources */,
 				420873E52C77ABD000CC208D /* LaunchScreen.storyboard in Resources */,
 				420873E22C77ABD000CC208D /* Assets.xcassets in Resources */,
+				42BDA8062C78E1D00038D7DA /* DisplayPhoto.storyboard in Resources */,
 				420873E02C77ABCF00CC208D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,14 +442,17 @@
 			files = (
 				4208741F2C77B75D00CC208D /* PhotoDomainModel.swift in Sources */,
 				4208741A2C77B60D00CC208D /* PhotosListTableViewCell.swift in Sources */,
+				42BDA80A2C78E7B80038D7DA /* PhotoDisplayViewModel.swift in Sources */,
 				420874152C77B58F00CC208D /* RemoteApi.swift in Sources */,
 				4208740B2C77B0F500CC208D /* UIView+Extension.swift in Sources */,
 				420873D92C77ABCF00CC208D /* AppDelegate.swift in Sources */,
 				4208740E2C77B3B200CC208D /* UIImageView+Extension.swift in Sources */,
+				42BDA8082C78E5A70038D7DA /* DisplayPhoto+ScollDelegate.swift in Sources */,
 				4208741D2C77B6CF00CC208D /* Photos.swift in Sources */,
 				420874212C77B80200CC208D /* Publisher+AsFuture.swift in Sources */,
 				420874252C77B95900CC208D /* PhotosListRepositoryImplementation.swift in Sources */,
 				420874172C77B5D800CC208D /* ErrorMessage.swift in Sources */,
+				42BDA8042C78E1BF0038D7DA /* DisplayPhotoViewController.swift in Sources */,
 				420873FB2C77ADFE00CC208D /* PhotosListViewController+TableViewExtension.swift in Sources */,
 				420874272C77B9C900CC208D /* PhotosListAPIRepository.swift in Sources */,
 				420874232C77B90400CC208D /* PhotosListRepository.swift in Sources */,
@@ -563,7 +611,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 25D2639H39;
+				DEVELOPMENT_TEAM = 8BVT59WJV8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotosApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -577,7 +625,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ADVA.PhotosApp;
+				PRODUCT_BUNDLE_IDENTIFIER = emcan.PickrrApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
