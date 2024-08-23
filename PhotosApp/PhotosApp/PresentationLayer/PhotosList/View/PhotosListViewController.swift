@@ -27,7 +27,7 @@ class PhotosListViewController: UIViewController {
     }
     
     private func setupUI() {
-        navigationItem.title = "Recipes"
+        navigationItem.title = "Home"
         photoListTableView.dataSource = self
         photoListTableView.delegate = self
         activityIndicator = UIActivityIndicatorView(style: .medium)

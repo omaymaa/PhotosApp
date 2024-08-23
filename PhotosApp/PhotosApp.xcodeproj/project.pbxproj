@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		420873D92C77ABCF00CC208D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420873D82C77ABCF00CC208D /* AppDelegate.swift */; };
 		420873DB2C77ABCF00CC208D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420873DA2C77ABCF00CC208D /* SceneDelegate.swift */; };
-		420873E02C77ABCF00CC208D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 420873DE2C77ABCF00CC208D /* Main.storyboard */; };
+		420873E02C77ABCF00CC208D /* PhotoList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 420873DE2C77ABCF00CC208D /* PhotoList.storyboard */; };
 		420873E22C77ABD000CC208D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 420873E12C77ABD000CC208D /* Assets.xcassets */; };
 		420873E52C77ABD000CC208D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 420873E32C77ABD000CC208D /* LaunchScreen.storyboard */; };
 		420873F72C77ADCA00CC208D /* PhotosListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420873F62C77ADCA00CC208D /* PhotosListViewModel.swift */; };
@@ -51,7 +51,7 @@
 		420873D52C77ABCF00CC208D /* PhotosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		420873D82C77ABCF00CC208D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		420873DA2C77ABCF00CC208D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		420873DF2C77ABCF00CC208D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		420873DF2C77ABCF00CC208D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PhotoList.storyboard; sourceTree = "<group>"; };
 		420873E12C77ABD000CC208D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		420873E42C77ABD000CC208D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		420873E62C77ABD000CC208D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -132,8 +132,8 @@
 		420873ED2C77ACDC00CC208D /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				42BDA7FF2C78E17B0038D7DA /* DisplayPhoto */,
 				420873F32C77AD7800CC208D /* PhotosList */,
+				42BDA7FF2C78E17B0038D7DA /* DisplayPhoto */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -216,7 +216,7 @@
 		420873FC2C77AE2100CC208D /* PhotosListStoryBoard */ = {
 			isa = PBXGroup;
 			children = (
-				420873DE2C77ABCF00CC208D /* Main.storyboard */,
+				420873DE2C77ABCF00CC208D /* PhotoList.storyboard */,
 			);
 			path = PhotosListStoryBoard;
 			sourceTree = "<group>";
@@ -437,7 +437,7 @@
 				420873E52C77ABD000CC208D /* LaunchScreen.storyboard in Resources */,
 				420873E22C77ABD000CC208D /* Assets.xcassets in Resources */,
 				42BDA8062C78E1D00038D7DA /* DisplayPhoto.storyboard in Resources */,
-				420873E02C77ABCF00CC208D /* Main.storyboard in Resources */,
+				420873E02C77ABCF00CC208D /* PhotoList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,12 +473,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		420873DE2C77ABCF00CC208D /* Main.storyboard */ = {
+		420873DE2C77ABCF00CC208D /* PhotoList.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				420873DF2C77ABCF00CC208D /* Base */,
 			);
-			name = Main.storyboard;
+			name = PhotoList.storyboard;
 			sourceTree = "<group>";
 		};
 		420873E32C77ABD000CC208D /* LaunchScreen.storyboard */ = {
@@ -623,7 +623,7 @@
 				INFOPLIST_FILE = PhotosApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = PhotoList;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -656,7 +656,7 @@
 				INFOPLIST_FILE = PhotosApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = PhotoList;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
