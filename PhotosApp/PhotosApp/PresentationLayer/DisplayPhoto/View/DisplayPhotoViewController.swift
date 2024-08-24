@@ -14,8 +14,10 @@ class DisplayPhotoViewController: UIViewController,UIScrollViewDelegate {
     @IBOutlet weak var photoTitleLbl: UILabel!
     @IBOutlet weak var scrollView: UIScrollView! {
         didSet{
+            // Set the zoom scale limits for the scroll view
             scrollView.minimumZoomScale = 1.0
             scrollView.maximumZoomScale = 6.0
+            // Set the delegate to handle zooming
             scrollView.delegate = self
         }
     }
@@ -42,7 +44,7 @@ class DisplayPhotoViewController: UIViewController,UIScrollViewDelegate {
                .store(in: &cancellables)
        }
        
-    
+    // Provide the view to zoom in when the user pinches on the scroll view
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return photo
     }
@@ -51,6 +53,4 @@ class DisplayPhotoViewController: UIViewController,UIScrollViewDelegate {
         dismiss(animated: true)
     }
     
-  
-
 }

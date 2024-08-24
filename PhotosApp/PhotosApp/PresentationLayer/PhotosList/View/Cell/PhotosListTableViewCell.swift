@@ -21,6 +21,7 @@ class PhotosListTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
     func configure(with photoData: PhotoDomainModel) {
         photoNameLbl.text = photoData.title
         photo.loadRemoteImageFrom(urlString: photoData.thumbnailURL!)

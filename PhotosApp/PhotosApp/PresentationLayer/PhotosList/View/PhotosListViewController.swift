@@ -40,6 +40,7 @@ class PhotosListViewController: UIViewController {
     }
     
     private func bindViewModel() {
+        // Bind the photosData from the view model to reload the table view when data changes
         viewModel.$photosData
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
@@ -47,16 +48,21 @@ class PhotosListViewController: UIViewController {
             }
             .store(in: &cancellables)
         
+        // Bind the loadingState from the view model to control the activity indicator
         viewModel.$loadingState
             .receive(on: DispatchQueue.main)
             .sink { [weak self] loadingState in
                 if loadingState == .loading {
+                    // Start animating the activity indicator when loading starts
                     self?.activityIndicator.startAnimating()
                 } else {
+                    // Stop animating the activity indicator when loading ends
                     self?.activityIndicator.stopAnimating()
                 }
             }
             .store(in: &cancellables)
+        
+        // Fetch all photos when the view is loaded
         viewModel.fetchAllPhotos()
     }
     

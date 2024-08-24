@@ -9,22 +9,23 @@ import UIKit
 import Combine
 
 class PhotosListViewModel: ObservableObject {
-    @Published var photosData: [PhotoDomainModel] = []
-    @Published var errorMessage: String?
-    @Published var loadingState: LoadingState = .finished
-
-    private var allPhotos: [PhotoDomainModel] = []
-    private var cancellables: Set<AnyCancellable> = []
+    @Published var photosData: [PhotoDomainModel] = [] // Data for UI binding
+    @Published var errorMessage: String? // Error message for UI
+    @Published var loadingState: LoadingState = .finished // Current loading state
+    
+    private var allPhotos: [PhotoDomainModel] = [] // All fetched photos
+    private var cancellables: Set<AnyCancellable> = [] // Combine subscriptions
     
     private var repository: PhotosListRepository = PhotosListRepositoryImplementation()
-    private var currentPage: Int = 0
-    private let itemsPerPage: Int = 10
-    private var hasMorePages: Bool = true
-
+    private var currentPage: Int = 0 // Tracks current page for pagination
+    private let itemsPerPage: Int = 10 // Number of items per page
+    private var hasMorePages: Bool = true // Flag for additional pages
+    
     init() {
         fetchAllPhotos()
     }
     
+    // Fetches all photos from the repository
     func fetchAllPhotos() {
         loadingState = .loading
         repository.fetchPhotosList()
@@ -45,6 +46,7 @@ class PhotosListViewModel: ObservableObject {
             .store(in: &cancellables)
     }
     
+    // Loads the next page of photos for pagination
     func loadNextPage() {
         guard loadingState != .loading, hasMorePages else { return }
         
@@ -61,6 +63,6 @@ class PhotosListViewModel: ObservableObject {
 }
 
 enum LoadingState {
-      case loading
-      case finished
-  }
+    case loading
+    case finished
+}
