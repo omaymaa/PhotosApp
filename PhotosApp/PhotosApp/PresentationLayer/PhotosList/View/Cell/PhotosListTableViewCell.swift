@@ -19,9 +19,8 @@ class PhotosListTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
-    
+    // Configure the view for the selected state
     func configure(with photoData: PhotoDomainModel) {
         photoNameLbl.text = photoData.title
         photo.loadRemoteImageFrom(urlString: photoData.thumbnailURL!)
